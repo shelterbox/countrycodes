@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="com.mendix.widget.custom.listviewcontrols.HeaderSort" offlineCapable="true" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Header sort</name>
+    <description>Sort Mendix list views using headers</description>
+    <icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAtFBMVEUAAABV//9Ns/9mZmZJtv9Vu/9JtvhJsPlVVVVIs/tLtPtMs/dLsPhVVVVJsvhXV1dIs/hWVlZVVVVKsvlJs/lJsPpXV1dKsvdVVVVKsfhJsvhJsfhIsfhIsPlVVVVJsfdWVlZIsPdKsfdJsPhJsfhJsfhVVVVJsPhIsfhIsfhJsfhIsfhJsfhJsfdVVVVIsPdWVlZJsPdVVVVJsfdJsfdIsPdIsPdJsfhVVVVIsPhIsPdVVVUbiIIIAAAAOnRSTlMAAwoKDg8jKio8PUBESElJSkpLVldeXmBgb3CJip+foKCio7y91dXW19ja293h4eLi4+Pk5+zt9fX6/A3sdwAAAYBJREFUeAHtkulysjAUhg/yifv+uVRbtS5Yl1qIWuXk/u+rhzmWSaYwzcCftsPzIxOGN8/AmwM5v5ecnJYQLciCkFJAFiTxVwW17baWRWD5iL6VQVBBoppBMEHiMYNgg8QLME0fFXZ1A4HDWYeffNQ4GAgeODqOFewNBEuOruJ+AfvfC/4FHA2KoDFEYmZQYo9ymzUt/0GldEXEdcFAsKDgZELLAhQKofJaMrhG6xJOUYWWd3UYn5AYgoEgPHqxWPOlABPB/eOfeRj1AgwEPIa9e5XJBSQLHL5AvkwHmBkXYCQYo8JYK8BMsESFlVqAmaAYoEJQTCqg44nup6ArvI4yhhq9pAKElLcyC8o3KYU+htp99lHFb/JLj466tiRslxYvEpwpVOFtlbZngD1q+PxyIImpJOaSGESCEx2yeGuRjOKHWAHMpcIcItpvfjPan17bAPVd3C8AfXmEa0MKqDsmbDMVI3lnBKmIaphCWmw3dQFKDVRABhrHYwN+HDk5OR+by4G438X1AwAAAABJRU5ErkJggg==</icon>
+    <properties>
+        <property key="entity" type="entity">
+            <caption>List view with entity</caption>
+            <category>General</category>
+            <description>Select the same entity as the list view that this widget should interact with. If multiple list views with this entity are found, the closest is used</description>
+        </property>
+        <property key="sortAttribute" type="attribute" isPath="optional" pathType="reference" entityProperty="entity">
+            <caption>Sort attribute</caption>
+            <category>General</category>
+            <description/>
+            <attributeTypes>
+                <attributeType name="String"/>
+                <attributeType name="Integer"/>
+                <attributeType name="Decimal"/>
+                <attributeType name="Boolean"/>
+                <attributeType name="DateTime"/>
+                <attributeType name="Enum"/>
+                <attributeType name="Long"/>
+                <attributeType name="AutoNumber"/>
+            </attributeTypes>
+        </property>
+        <property key="caption" type="translatableString">
+            <caption>Caption</caption>
+            <category>General</category>
+            <description/>
+        </property>
+        <property key="initialSorted" type="boolean" defaultValue="false">
+            <caption>Initial sorted</caption>
+            <category>General</category>
+            <description>On loading of the page the initial sort will be applied. Initial sort can only set to a single control</description>
+        </property>
+        <property key="sortOrder" type="enumeration" defaultValue="asc">
+            <caption>Initial sort order</caption>
+            <category>General</category>
+            <description/>
+            <enumerationValues>
+                <enumerationValue key="asc">Ascending</enumerationValue>
+                <enumerationValue key="desc">Descending</enumerationValue>
+            </enumerationValues>
+        </property>
+    </properties>
+</widget>

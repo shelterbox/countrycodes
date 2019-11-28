@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="com.mendix.widget.custom.listviewcontrols.DropDownSort" offlineCapable="true" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Drop down sort</name>
+    <description>Sort Mendix list views using a single-field sort</description>
+    <icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAtFBMVEUAAABV//9Ns/9mZmZJtv9Vu/9JtvhJsPlVVVVIs/tLtPtMs/dLsPhVVVVJsvhXV1dIs/hWVlZVVVVKsvlJs/lJsPpXV1dKsvdVVVVKsfhJsvhJsfhIsfhIsPlVVVVJsfdWVlZIsPdKsfdJsPhJsfhJsfhVVVVJsPhIsfhIsfhJsfhIsfhJsfhJsfdVVVVIsPdWVlZJsPdVVVVJsfdJsfdIsPdIsPdJsfhVVVVIsPhIsPdVVVUbiIIIAAAAOnRSTlMAAwoKDg8jKio8PUBESElJSkpLVldeXmBgb3CJip+foKCio7y91dXW19ja293h4eLi4+Pk5+zt9fX6/A3sdwAAAYRJREFUeAHtlWlPwkAQhilIuQ+oHIICcoAcYreA0OX//y9nXKrb2DWZ2Q/GpM+HTZPhfULfnaSZlP9GZb2u2OQdIaVwLAQlCZQtBEMUPFoIVih44edd+YnLFjwowYAtmCnBPGOmEQQN4/AuVIIwbxYE12tgHHoQXi3guDcLroBxOIXsEG9yyhM4J9wi3KV3hyXA6MlRGpbg9uefcRlZAlxD71YlR+CqC1SX6TIEA6kxYAhmumBOF+RDXRDmyQJPxvCoArWG2n2SBUdIldRjGR6PZMEBQs5tp0EmyILmm6h/PR9emwSBgT8QpIK6kBqbKlkgZIydrWBr+Qqywy+xh/kx/xYKZ8gvsj8HLT9oR4J24LcM+Sx+2s6F5K/ipagExYv5C/kkgV7SxIfoMoeC3BIOn1xAF7MjPCZ4dGkFIJD7ZkIsAMF/HrHMJf5kbCwAwe4U2CaxAEU/EvTpBcRqGDEK0GtgFaDVYCigI3VE3WCo7fe15MlWxg0ZKjtbQXXz2yukpHwAAOGFaGtXJegAAAAASUVORK5CYII=</icon>
+    <properties>
+        <property key="entity" type="entity">
+            <caption>List view with entity</caption>
+            <category>General</category>
+            <description>Select the same entity as the list view that this widget should interact with. If multiple list views with this entity are found, the closest is used</description>
+        </property>
+        <property key="sortAttributes" type="object" isList="true" required="false">
+            <caption>Sort options</caption>
+            <category>General</category>
+            <description/>
+            <properties>
+                <property key="caption" type="translatableString">
+                    <caption>Caption</caption>
+                    <category>Attribute</category>
+                    <description/>
+                </property>
+                <property key="name" type="attribute" isPath="optional" pathType="reference" entityProperty="../entity">
+                    <caption>Attribute</caption>
+                    <category>Attribute</category>
+                    <description>The attribute of the list view entity</description>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                        <attributeType name="Integer"/>
+                        <attributeType name="Decimal"/>
+                        <attributeType name="Boolean"/>
+                        <attributeType name="DateTime"/>
+                        <attributeType name="Enum"/>
+                        <attributeType name="Long"/>
+                        <attributeType name="AutoNumber"/>
+                    </attributeTypes>
+                </property>
+                <property key="sort" type="enumeration" defaultValue="asc">
+                    <caption>Sort order</caption>
+                    <category>Attribute</category>
+                    <description/>
+                    <enumerationValues>
+                        <enumerationValue key="asc">Ascending</enumerationValue>
+                        <enumerationValue key="desc">Descending</enumerationValue>
+                    </enumerationValues>
+                </property>
+                <property key="defaultSelected" type="boolean" defaultValue="false">
+                    <caption>Default selected</caption>
+                    <category>Attribute</category>
+                    <description>Only one filter can be set as default. When there is no default option provided, the first sort option will be selected by default</description>
+                </property>
+            </properties>
+        </property>
+    </properties>
+</widget>

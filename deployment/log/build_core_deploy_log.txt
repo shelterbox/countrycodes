@@ -1,0 +1,9 @@
+Buildfile: C:\Mendix\Apps\shelterbox.mx.lib.countrydata\deployment\build_core.xml
+
+deploy:
+     [copy] Copying 46 files to C:\Mendix\Apps\shelterbox.mx.lib.countrydata\deployment
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="com.mendix.widget.custom.listviewcontrols.TextBoxSearch" offlineCapable="true" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Text box search</name>
+    <description>Search Mendix list views using a search input</description>
+    <icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAA21BMVEUAAAD///9V//9VVVVdXV1VVVVJtv9bW1tVu/9dXV1bW1tJtvhXV1dXV1dXV1dIs/tLtPtMs/dYWFhJsvhXV1dIs/hWVlZXV1dKsvlJs/lVVVVVVVVXV1dKsfhJsvhVVVVWVlZWVlZWVlZWVlZJsfhIsfhIsPdKsfdVVVVWVlZWVlZWVlZJsPhJsfhVVVVVVVVWVlZJsfhJsPhIsfhIsfhWVlZJsfdIsPdJsPdVVVVJsfdJsfdVVVVWVlZIsPdIsPdVVVVVVVVVVVVVVVVIsPhVVVVVVVVIsPdVVVUrJ/rdAAAAR3RSTlMAAQMJCwwODg8WHCMjJjg8PUBASUlKUFJWV1dpam9wcn1/goOJiqKjpaequLy9v9LT1dbX2Nnh4uPj5Ofn6Ozt8vP4+fr8/tAt6NsAAAIISURBVHja7ZbZVsJADIYDUpGtCAqioFBE2RRXFNQqq8P7P5HJWMEwbQ853njBdwE9mck/2z8LbPEjXW31+uNxv9eqpsGH3ONjDgJJ1G8Xv7itJ2CN6ECpQRT8sZzxYo2xYwEjq5B98OXIXfjgHrFKDRK4AB8izqdOmHYr+YxlZfKV7lQHPp0IrLgngQcw2eno2m/l+CoWL7/pYGdnGUopTcpsX+dPajEejtUmWmHZh1OlOTMEHN28DQa27oQDHldKc23MH43/Jgk+JG9oHryZ3J0pzWwPGJZL7WO+rwL1wbWAKGHy/R3+HJsDmNgQgD1ZDqKJuQ1aySb3H/mnBoHUyFEJsuE7uYi89MHMeE4DiEEgMRpE3bPhe5RkuBnJ/2UIoUz7Av+9zl+umTFN/otDCHHyZPrbhiVvKmFFFUu7EEoXq1QhpReQFpObsYWlFQilglVacKY0hhl7WJqHUPJYpfdjQ8OMfSzNQCgZrNLf82xomJFcYEEoFjmhpBilZeloM4GRtuHqWGmKh/CKWVnQ7OPnq3gSXzDJc3AUxQbiZSw8Dw7Ao/DyVJAbyUBqZY58MwVT33Q7c+QHCkd+pHHkhypHfqxzpBdL24gLrjZifsLjwsvVVJBd7+25oSB8YJwYCsInjqEgfGQxBfkzjytI2SpsFf67QvGvCkP4kwIXkFMcDg9hy7/hC2H3zih53z21AAAAAElFTkSuQmCC</icon>
+    <properties>
+        <property key="entity" type="entity">
+            <caption>List view with entity</caption>
+            <category>General</category>
+            <description>Select the same entity as the list view that this widget should interact with. If multiple list views with this entity are found, the closest is used</description>
+        </property>
+        <property key="attributeList" type="object" isList="true">
+            <caption>Search attributes</caption>
+            <category>General</category>
+            <description/>
+            <properties>
+                <property key="attribute" type="attribute" isPath="optional" pathType="reference" entityProperty="../entity">
+                    <caption>Attribute</caption>
+                    <category>General</category>
+                    <description>The attribute of the list view entity</description>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                        <attributeType name="Integer"/>
+                        <attributeType name="Decimal"/>
+                        <attributeType name="Boolean"/>
+                        <attributeType name="DateTime"/>
+                        <attributeType name="Enum"/>
+                        <attributeType name="Long"/>
+                        <attributeType name="AutoNumber"/>
+                    </attributeTypes>
+                </property>
+            </properties>
+        </property>
+        <property key="placeHolder" type="translatableString" required="false">
+            <caption>Placeholder</caption>
+            <category>General</category>
+            <description>The text shown in the search input, to hint users that the input can be used for searching</description>
+            <translations>
+                <translation lang="en_US">Search</translation>
+                <translation lang="nl_NL">Zoeken</translation>
+            </translations>
+        </property>
+        <property key="defaultQuery" type="string" required="false">
+            <caption>Default search text</caption>
+            <category>General</category>
+            <description>Query that is used on initial loading of the page</description>
+        </property>
+    </properties>
+</widget>

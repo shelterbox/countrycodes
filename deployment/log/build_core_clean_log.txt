@@ -1,0 +1,8 @@
+Buildfile: C:\Mendix\Apps\shelterbox.mx.lib.countrydata\deployment\build_core.xml
+
+clean:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+
