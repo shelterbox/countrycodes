@@ -65,6 +65,9 @@ public class Image extends system.proxies.FileDocument
 	 */
 	public static system.proxies.Image initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
+		if (com.mendix.core.Core.isSubClassOf("DataHubIo_CountryCodes.CountryFlag", mendixObject.getType()))
+			return datahubio_countrycodes.proxies.CountryFlag.initialize(context, mendixObject);
+
 		return new system.proxies.Image(context, mendixObject);
 	}
 
@@ -74,7 +77,7 @@ public class Image extends system.proxies.FileDocument
 		return system.proxies.Image.initialize(context, mendixObject);
 	}
 
-	public static java.util.List<system.proxies.Image> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
+	public static java.util.List<? extends system.proxies.Image> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
 	{
 		java.util.List<system.proxies.Image> result = new java.util.ArrayList<system.proxies.Image>();
 		for (com.mendix.systemwideinterfaces.core.IMendixObject obj : com.mendix.core.Core.retrieveXPathQuery(context, "//System.Image" + xpathConstraint))

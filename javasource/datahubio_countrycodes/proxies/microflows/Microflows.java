@@ -10,6 +10,7 @@ import com.mendix.core.Core;
 import com.mendix.core.CoreException;
 import com.mendix.systemwideinterfaces.MendixRuntimeException;
 import com.mendix.systemwideinterfaces.core.IContext;
+import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public class Microflows
 {
@@ -20,6 +21,20 @@ public class Microflows
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			Core.execute(context, "DataHubIo_CountryCodes.ACT_CountryCodes_Update", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static datahubio_countrycodes.proxies.CountryFlag countryFlag_Ensure(IContext context, datahubio_countrycodes.proxies.CountryCode _countryCode)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("CountryCode", _countryCode == null ? null : _countryCode.getMendixObject());
+			IMendixObject result = (IMendixObject)Core.execute(context, "DataHubIo_CountryCodes.CountryFlag_Ensure", params);
+			return result == null ? null : datahubio_countrycodes.proxies.CountryFlag.initialize(context, result);
 		}
 		catch (CoreException e)
 		{

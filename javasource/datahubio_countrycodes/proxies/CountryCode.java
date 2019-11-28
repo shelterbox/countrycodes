@@ -72,7 +72,8 @@ public class CountryCode
 		Official_name_en("Official_name_en"),
 		Official_name_es("Official_name_es"),
 		Official_name_fr("Official_name_fr"),
-		Official_name_ru("Official_name_ru");
+		Official_name_ru("Official_name_ru"),
+		CountryFlag_CountryCode("DataHubIo_CountryCodes.CountryFlag_CountryCode");
 
 		private java.lang.String metaName;
 
@@ -2073,6 +2074,49 @@ public class CountryCode
 	public final void setOfficial_name_ru(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String official_name_ru)
 	{
 		getMendixObject().setValue(context, MemberNames.Official_name_ru.toString(), official_name_ru);
+	}
+
+	/**
+	 * @return value of CountryFlag_CountryCode
+	 */
+	public final datahubio_countrycodes.proxies.CountryFlag getCountryFlag_CountryCode() throws com.mendix.core.CoreException
+	{
+		return getCountryFlag_CountryCode(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of CountryFlag_CountryCode
+	 */
+	public final datahubio_countrycodes.proxies.CountryFlag getCountryFlag_CountryCode(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		datahubio_countrycodes.proxies.CountryFlag result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.CountryFlag_CountryCode.toString());
+		if (identifier != null)
+			result = datahubio_countrycodes.proxies.CountryFlag.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of CountryFlag_CountryCode
+	 * @param countryflag_countrycode
+	 */
+	public final void setCountryFlag_CountryCode(datahubio_countrycodes.proxies.CountryFlag countryflag_countrycode)
+	{
+		setCountryFlag_CountryCode(getContext(), countryflag_countrycode);
+	}
+
+	/**
+	 * Set value of CountryFlag_CountryCode
+	 * @param context
+	 * @param countryflag_countrycode
+	 */
+	public final void setCountryFlag_CountryCode(com.mendix.systemwideinterfaces.core.IContext context, datahubio_countrycodes.proxies.CountryFlag countryflag_countrycode)
+	{
+		if (countryflag_countrycode == null)
+			getMendixObject().setValue(context, MemberNames.CountryFlag_CountryCode.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.CountryFlag_CountryCode.toString(), countryflag_countrycode.getMendixObject().getId());
 	}
 
 	/**

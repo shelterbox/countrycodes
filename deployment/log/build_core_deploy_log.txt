@@ -2,8 +2,9 @@ Buildfile: C:\Mendix\Apps\shelterbox.mx.lib.countrydata\deployment\build_core.xm
 
 deploy:
      [copy] Copying 46 files to C:\Mendix\Apps\shelterbox.mx.lib.countrydata\deployment
+     [copy] Copying 201 files to C:\Mendix\Apps\shelterbox.mx.lib.countrydata\deployment\model\resources
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 1 second
 
 
