@@ -27,13 +27,55 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static datahubio_countrycodes.proxies.CountryFlag countryFlag_Ensure(IContext context, datahubio_countrycodes.proxies.CountryCode _countryCode)
+	public static datahubio_countrycodes.proxies.CountryFlag countryFlag_Ensure_CWF(IContext context, datahubio_countrycodes.proxies.CountryCode _countryCode)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("CountryCode", _countryCode == null ? null : _countryCode.getMendixObject());
-			IMendixObject result = (IMendixObject)Core.execute(context, "DataHubIo_CountryCodes.CountryFlag_Ensure", params);
+			IMendixObject result = (IMendixObject)Core.execute(context, "DataHubIo_CountryCodes.CountryFlag_Ensure_CWF", params);
+			return result == null ? null : datahubio_countrycodes.proxies.CountryFlag.initialize(context, result);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static datahubio_countrycodes.proxies.CountryFlag countryFlag_Ensure_Flagpedia(IContext context, datahubio_countrycodes.proxies.CountryCode _countryCode)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("CountryCode", _countryCode == null ? null : _countryCode.getMendixObject());
+			IMendixObject result = (IMendixObject)Core.execute(context, "DataHubIo_CountryCodes.CountryFlag_Ensure_Flagpedia", params);
+			return result == null ? null : datahubio_countrycodes.proxies.CountryFlag.initialize(context, result);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static datahubio_countrycodes.proxies.CountryFlag countryFlag_Ensure_FoTW(IContext context, datahubio_countrycodes.proxies.CountryCode _countryCode)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("CountryCode", _countryCode == null ? null : _countryCode.getMendixObject());
+			IMendixObject result = (IMendixObject)Core.execute(context, "DataHubIo_CountryCodes.CountryFlag_Ensure_FoTW", params);
+			return result == null ? null : datahubio_countrycodes.proxies.CountryFlag.initialize(context, result);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static datahubio_countrycodes.proxies.CountryFlag countryFlag_Ensure_FoTW_2(IContext context, datahubio_countrycodes.proxies.CountryCode _countryCode)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("CountryCode", _countryCode == null ? null : _countryCode.getMendixObject());
+			IMendixObject result = (IMendixObject)Core.execute(context, "DataHubIo_CountryCodes.CountryFlag_Ensure_FoTW_2", params);
 			return result == null ? null : datahubio_countrycodes.proxies.CountryFlag.initialize(context, result);
 		}
 		catch (CoreException e)

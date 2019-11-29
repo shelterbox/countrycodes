@@ -1,12 +1,12 @@
 Buildfile: C:\Mendix\Apps\shelterbox.mx.lib.countrydata\deployment\build_core.xml
 
 compile:
-    [javac] Compiling 2 source files to C:\Mendix\Apps\shelterbox.mx.lib.countrydata\deployment\run\bin
+    [javac] Compiling 3 source files to C:\Mendix\Apps\shelterbox.mx.lib.countrydata\deployment\run\bin
 
 package:
       [jar] Building jar: C:\Mendix\Apps\shelterbox.mx.lib.countrydata\deployment\model\bundles\project.jar
 
 BUILD SUCCESSFUL
-Total time: 3 seconds
+Total time: 2 seconds
 
 
