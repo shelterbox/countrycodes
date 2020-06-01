@@ -83,6 +83,21 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
+	public static datahubio_countrycodes.proxies.CountryCode getCountryCode(IContext context, java.lang.String _iSO3166_1_Alpha_2, java.lang.String _iSO3166_1_Alpha_3)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("ISO3166_1_Alpha_2", _iSO3166_1_Alpha_2);
+			params.put("ISO3166_1_Alpha_3", _iSO3166_1_Alpha_3);
+			IMendixObject result = (IMendixObject)Core.execute(context, "DataHubIo_CountryCodes.GetCountryCode", params);
+			return result == null ? null : datahubio_countrycodes.proxies.CountryCode.initialize(context, result);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
 	public static boolean string2Boolean(IContext context, java.lang.String _string)
 	{
 		try
